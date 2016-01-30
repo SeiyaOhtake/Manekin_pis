@@ -44,7 +44,7 @@ public class HealthBarController : MonoBehaviour
 	public void UpdateHealthBar ()
 	{
         _hp = MP.getHP(); // 初期HPを設定
-        print(_hp);
+        //print(_hp);
 		if (healthBarParent.transform.childCount == _hp)
 			return;
 		

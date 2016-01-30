@@ -16,17 +16,17 @@ public class Manekin_Pis : MonoBehaviour {
 
 	private Animator mannekenPisAnimator;
 
+    HealthBarController HBC;
+
     public int HP=5;
     public int SCORE=0;
     public int Special_Gauge=0;
 
     void Start()
     {
-        //PS = new PlayerScript();
         rb2d = GetComponent<Rigidbody2D>();
 		mannekenPisAnimator = GetComponent<Animator> ();
-
-        //PS.HP = 5;
+        HBC = GameObject.FindWithTag("HealthBar").GetComponent<HealthBarController>();
     }
 	
 	// Update is called once per frame
@@ -69,11 +69,22 @@ public class Manekin_Pis : MonoBehaviour {
         if (coll.gameObject.tag == "Enemy")
         {
             HP--;//ダメージが入る。無敵時間モードを実装しなくてもよさげ
+            HBC.UpdateHealthBar();
         }
     }
 
     public int getHP()
     {
         return HP;
+    }
+
+    public int getScore()
+    {
+        return SCORE;
+    }
+
+    public void PulsScore(int add)
+    {
+        SCORE += add;
     }
 }
