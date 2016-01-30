@@ -16,14 +16,19 @@ public class HealthBarController : MonoBehaviour
 	[SerializeField]
 	bool isDebug = false;
 
+    Manekin_Pis MP;
+
 	private int _hp;
 	private int _maxHp;
 
 	void Start ()
 	{
-		_hp = 10; // 仮でHPを設定
+        //MP = Player_Prefab_.GetComponent<Manekin_Pis>();
+        MP = GameObject.FindWithTag("Player").GetComponent<Manekin_Pis>();
+		
 		UpdateHealthBar ();
 		initHealthBarBackGround ();
+        //Player_Prefab=GameObject<>
 	}
 
 	private void initHealthBarBackGround ()
@@ -38,7 +43,8 @@ public class HealthBarController : MonoBehaviour
 
 	public void UpdateHealthBar ()
 	{
-		//_hp = Player.instance.GetHP(); // TODO: プレイヤーからHPを取得する
+        _hp = MP.getHP(); // 初期HPを設定
+        print(_hp);
 		if (healthBarParent.transform.childCount == _hp)
 			return;
 		
