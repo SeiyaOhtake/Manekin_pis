@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MP_Bullet : MonoBehaviour {
    
-    public int speed = 10;//弾のスピード
+    public int speed = 20;//弾のスピード
 
     public GameObject bullet;
 
@@ -34,6 +34,9 @@ public class MP_Bullet : MonoBehaviour {
         if (coll.gameObject.tag == "Stage")
         {
             StartCoroutine("DestroyBullet");
+        }
+        if (coll.gameObject.tag == "Player")
+        {
         }
     }
 }
