@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Manekin_Pis : MonoBehaviour {
 
@@ -14,14 +15,15 @@ public class Manekin_Pis : MonoBehaviour {
     HealthBarController HBC;//体力表示に必要
 
     public int HP=5;//体力
-    public int SCORE=0;//スコア
+    public static int SCORE=0;//スコア
     public int Special_Gauge=0;//必殺ゲージ（未実装）
 
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-		mannekenPisAnimator = GetComponent<Animator> ();
-        HBC = GameObject.FindWithTag("HealthBar").GetComponent<HealthBarController>();
+        //おまじない一覧
+        rb2d = GetComponent<Rigidbody2D>();//重力
+		mannekenPisAnimator = GetComponent<Animator> ();//小僧のアニメーター
+        HBC = GameObject.FindWithTag("HealthBar").GetComponent<HealthBarController>();//体力バー関係
     }
 	
 	// Update is called once per frame
@@ -48,7 +50,11 @@ public class Manekin_Pis : MonoBehaviour {
         if (HP <= 0)
         {
             //loadlevelを設定すること
-            Debug.Log("you died");//デバッグ
+            //Debug.Log("you died");//デバッグ
+            //Application.loadedLevel("Result");
+            //Application.LoadLevel("Result");
+            SceneManager.LoadScene("Result");
+            
         }
 	}
 
@@ -83,4 +89,10 @@ public class Manekin_Pis : MonoBehaviour {
     {
         SCORE += add;
     }
+
+    public static int getResultScore()
+    {
+        return SCORE;
+    }
+
 }
