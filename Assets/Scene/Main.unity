@@ -132,7 +132,12 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 6.259823
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100354, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6512856, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1335627019
@@ -246,6 +251,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026ed9c293bfc1548bef4343382b4800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1368919485 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100354, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
+  m_PrefabInternal: {fileID: 464949042}
+--- !u!65 &1368919487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1368919485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1372078315 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100354, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
+  m_PrefabInternal: {fileID: 1496322520}
+--- !u!65 &1372078317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372078315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1496322520
 Prefab:
   m_ObjectHideFlags: 0
@@ -259,7 +296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447966, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.17
+      value: -4.57
       objectReference: {fileID: 0}
     - target: {fileID: 447966, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
       propertyPath: m_LocalPosition.z
@@ -283,8 +320,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447966, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100354, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512856, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6512856, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 980ffae38d4b3d9469a09125230d9518, type: 2}
   m_IsPrefabParent: 0
