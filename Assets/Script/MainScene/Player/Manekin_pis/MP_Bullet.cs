@@ -5,6 +5,8 @@ public class MP_Bullet : MonoBehaviour {
    
     public int speed = 20;//弾のスピード
 
+    public float WaitTime=1.0f;
+
     public GameObject bullet;
 
     IEnumerator DestroyBullet()
@@ -13,7 +15,7 @@ public class MP_Bullet : MonoBehaviour {
         {
             // 弾をプレイヤーと同じ位置/角度で作成
             // 1秒後消す
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(WaitTime);
             Destroy(bullet);
 
         }
@@ -31,12 +33,27 @@ public class MP_Bullet : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Stage")
+        StartCoroutine("DestroyBullet");
+    }
+
+    public void ChangeBullet(int i)
+    {
+        switch (i)
         {
-            StartCoroutine("DestroyBullet");
+            case 0://通常
+                speed = 20;
+                WaitTime = 1.0f;
+                break;
+            case 1://ビール取ったとき
+                speed = 30;
+                WaitTime = 0.5f;
+                //bullet.renderer.
+                break;
+            case 2://RedBullをとったとき
+                speed = 30;
+                WaitTime = 0.1f;
+                break;
         }
-        if (coll.gameObject.tag == "Player")
-        {
-        }
+
     }
 }
