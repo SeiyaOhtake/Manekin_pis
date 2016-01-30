@@ -10,19 +10,23 @@ public class Manekin_Pis : MonoBehaviour {
     public float flap = 9.0f;//ジャンプの強さ
     public bool JumpSwitch = false;//ジャンプしているか否か
 
-    public PlayerScript PS;//HPとかゲージとか
+    //public PlayerScript PS;//HPとかゲージとか
 
     public Rigidbody2D rb2d;
 
 	private Animator mannekenPisAnimator;
 
+    public int HP=5;
+    public int SCORE=0;
+    public int Special_Gauge=0;
+
     void Start()
     {
-        PS = new PlayerScript();
+        //PS = new PlayerScript();
         rb2d = GetComponent<Rigidbody2D>();
 		mannekenPisAnimator = GetComponent<Animator> ();
 
-        PS.HP = 5;
+        //PS.HP = 5;
     }
 	
 	// Update is called once per frame
@@ -45,7 +49,7 @@ public class Manekin_Pis : MonoBehaviour {
 		mannekenPisAnimator.SetFloat("Speed", WalkSpeed);
 		mannekenPisAnimator.SetBool ("Jump", JumpSwitch);
 
-        if (PS.HP <= 0)
+        if (HP <= 0)
         {
             //loadlevelを設定すること
             Debug.Log("you died");//デバッグ
@@ -64,7 +68,12 @@ public class Manekin_Pis : MonoBehaviour {
         //敵と当たったら
         if (coll.gameObject.tag == "Enemy")
         {
-            PS.HP--;//ダメージが入る。無敵時間モードを実装しなくてもよさげ
+            HP--;//ダメージが入る。無敵時間モードを実装しなくてもよさげ
         }
+    }
+
+    public int getHP()
+    {
+        return HP;
     }
 }
