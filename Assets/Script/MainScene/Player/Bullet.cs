@@ -8,6 +8,8 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
+    public int Damage;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,4 +19,9 @@ public class Bullet : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public int getDamage()
+    {
+        return Damage;
+    }
 }
