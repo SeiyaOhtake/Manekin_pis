@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b2924a0f443f64a52b82024e9c4e48e6
-timeCreated: 1454113202
+timeCreated: 1454115910
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,8 @@ TextureImporter:
     21300006: kozou_sprite_3
     21300008: kozou_sprite_4
     21300010: kozou_sprite_5
+    21300012: kozou_sprite_6
+    21300014: kozou_sprite_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,106 +61,91 @@ TextureImporter:
     - name: kozou_sprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11
+        y: 65
+        width: 10
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -3, y: 16}
-        - {x: -7, y: 14}
-        - {x: -7, y: -16}
-        - {x: 7, y: -16}
-        - {x: 7, y: 14}
-        - {x: 2, y: 16}
+      outline: []
     - name: kozou_sprite_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 43
+        y: 65
+        width: 10
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 15}
-        - {x: -7, y: 14}
-        - {x: -7, y: -7}
-        - {x: -5, y: -16}
-        - {x: 7, y: -16}
-        - {x: 7, y: 8}
-        - {x: 5, y: 15}
+      outline: []
     - name: kozou_sprite_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11
+        y: 33
+        width: 10
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 15}
-        - {x: -7, y: 14}
-        - {x: -7, y: -16}
-        - {x: 8, y: -16}
-        - {x: 8, y: 10}
-        - {x: 6, y: 15}
+      outline: []
     - name: kozou_sprite_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
+        x: 42
+        y: 32
+        width: 11
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -3, y: 16}
-        - {x: -7, y: 14}
-        - {x: -7, y: -16}
-        - {x: 7, y: -16}
-        - {x: 7, y: 14}
-        - {x: 2, y: 16}
+      outline: []
     - name: kozou_sprite_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11
+        y: 1
+        width: 11
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -5, y: 15}
-        - {x: -7, y: 14}
-        - {x: -7, y: -16}
-        - {x: 8, y: -16}
-        - {x: 8, y: 10}
-        - {x: 6, y: 15}
+      outline: []
     - name: kozou_sprite_5
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 43
+        y: 1
+        width: 10
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -3, y: 16}
-        - {x: -7, y: 14}
-        - {x: -7, y: -16}
-        - {x: 7, y: -16}
-        - {x: 7, y: 14}
-        - {x: 2, y: 16}
+      outline: []
+    - name: kozou_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1
+        width: 11
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: kozou_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1
+        width: 10
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
