@@ -47,7 +47,8 @@ public class Manekin_Pis : MonoBehaviour {
 
         if (PS.HP <= 0)
         {
-            Destroy(this.gameObject);//消えてくれないなぜや????
+            //loadlevelを設定すること
+            Debug.Log("you died");//デバッグ
         }
 	}
 
@@ -63,7 +64,7 @@ public class Manekin_Pis : MonoBehaviour {
         //敵と当たったら
         if (coll.gameObject.tag == "Enemy")
         {
-            PS.HP--;//ダメージが入る。無敵時間モードを実装すること！
+            PS.HP--;//ダメージが入る。無敵時間モードを実装しなくてもよさげ
         }
     }
 }
