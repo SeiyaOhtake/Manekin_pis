@@ -47,7 +47,7 @@ public class MP_Bullet : MonoBehaviour {
             case 1://ビール取ったとき
                 speed = 30;
                 WaitTime = 0.5f;
-                //bullet.renderer.
+                //bullet.renderer.//ここで弾の色を変えたい
                 break;
             case 2://RedBullをとったとき
                 speed = 30;
