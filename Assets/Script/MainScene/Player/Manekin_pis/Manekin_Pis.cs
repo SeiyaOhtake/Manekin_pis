@@ -12,13 +12,16 @@ public class Manekin_Pis : MonoBehaviour {
 
     public Rigidbody2D rb2d;
 
+	private Animator mannekenPisAnimator;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+		mannekenPisAnimator = GetComponent<Animator> ();
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         transform.Translate(Vector2.right * WalkSpeed);
 
         // スペースキーが押されたら
@@ -33,6 +36,9 @@ public class Manekin_Pis : MonoBehaviour {
                 JumpSwitch = true;
             }
         }
+
+		mannekenPisAnimator.SetFloat("Speed", WalkSpeed);
+		mannekenPisAnimator.SetBool ("Jump", JumpSwitch);
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
