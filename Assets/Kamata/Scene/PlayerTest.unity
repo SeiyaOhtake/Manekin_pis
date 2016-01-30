@@ -264,8 +264,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11428616, guid: 4507e5d769d6e4061ab161e4927446f7, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4507e5d769d6e4061ab161e4927446f7, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1056724690
@@ -527,7 +526,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 125954, guid: 443e5d7f00a7a411db2d602b4962f45a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 443e5d7f00a7a411db2d602b4962f45a, type: 2}
@@ -660,10 +659,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15c9c831deeb84fc79145c7fbb53eee7, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1435183471 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 127344, guid: 4507e5d769d6e4061ab161e4927446f7, type: 2}
-  m_PrefabInternal: {fileID: 917548576}
 --- !u!1001 &1604445938
 Prefab:
   m_ObjectHideFlags: 0
@@ -797,32 +792,8 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1815799207 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 160030, guid: 4507e5d769d6e4061ab161e4927446f7, type: 2}
-  m_PrefabInternal: {fileID: 917548576}
 --- !u!224 &1815799208 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22444692, guid: 4507e5d769d6e4061ab161e4927446f7,
     type: 2}
-  m_PrefabInternal: {fileID: 917548576}
---- !u!114 &1815799209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1815799207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f524e7e2e75f445dc8c7bb812051e7e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarParent: {fileID: 1929314083}
-  healthBarBackgroundParent: {fileID: 1435183471}
-  healthBar: {fileID: 154324, guid: 3732933ed465b40bfb6244aad1cbd549, type: 2}
-  healthBarBackground: {fileID: 127230, guid: b9b596cbdf01e464e807d31797f5d228, type: 2}
-  isDebug: 1
---- !u!1 &1929314083 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 125184, guid: 4507e5d769d6e4061ab161e4927446f7, type: 2}
   m_PrefabInternal: {fileID: 917548576}
