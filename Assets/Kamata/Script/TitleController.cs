@@ -60,6 +60,7 @@ public class TitleController : MonoBehaviour
 	private void pressStart ()
 	{
 		Debug.Log ("call pressStart()");
+		SceneManager.LoadScene ("Main");
 	}
 
 	private void pressCredit ()
