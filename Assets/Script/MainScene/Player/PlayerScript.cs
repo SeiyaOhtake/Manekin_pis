@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
 
     public int HP;
     //public int SCORE;
+    public int Special_Gauge;
 
 	// Use this for initialization
 	void Start () {

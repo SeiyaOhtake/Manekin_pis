@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-    public PlayerScript Enemy_;
+    public int HP;
     public int SCORE;
 
 	// Use this for initialization
@@ -13,14 +13,6 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    
+
 	}
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "PlayerBullet")
-        {
-
-        }
-    }
 }
