@@ -8,6 +8,8 @@ public class MP_Bullet : MonoBehaviour {
     public float WaitTime=1.0f;
 
     public GameObject bullet;
+    public GameObject FringPoint;
+    MP_FiringPoint MP_FP;
 
     IEnumerator DestroyBullet()
     {
@@ -24,6 +26,7 @@ public class MP_Bullet : MonoBehaviour {
 	void Start () {
         //弾発射
         GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
+        MP_FP = FringPoint.GetComponent<MP_FiringPoint>();
 	}
 	
 	// Update is called once per frame
@@ -43,15 +46,20 @@ public class MP_Bullet : MonoBehaviour {
             case 0://通常
                 speed = 20;
                 WaitTime = 1.0f;
+                //MP_FP.changeBullet(0);
                 break;
             case 1://ビール取ったとき
                 speed = 30;
                 WaitTime = 0.5f;
-                //bullet.renderer.//ここで弾の色を変えたい
+                //ここで弾の色を変えたい
+                //GetComponent<SpriteRenderer>().material.color = Color.yellow;
+                //Debug.Log("change color");
+                //MP_FP.changeBullet(1);
                 break;
             case 2://RedBullをとったとき
                 speed = 30;
                 WaitTime = 0.1f;
+                //MP_FP.changeBullet(2);
                 break;
         }
 

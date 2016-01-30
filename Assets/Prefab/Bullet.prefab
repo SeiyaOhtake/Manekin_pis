@@ -76,6 +76,7 @@ MonoBehaviour:
   speed: 30
   WaitTime: 0.5
   bullet: {fileID: 128612}
+  FringPoint: {fileID: 162790, guid: 443e5d7f00a7a411db2d602b4962f45a, type: 2}
 --- !u!212 &21228530
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -197,6 +198,10 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: FringPoint
+      value: 
+      objectReference: {fileID: 162790, guid: 443e5d7f00a7a411db2d602b4962f45a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128612}
