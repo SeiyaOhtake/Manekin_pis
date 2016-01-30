@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour
 {
 	[SerializeField]
 	GameObject selectMenu;
-	[SerializeField]
-	List<GameObject> menuList;
 
+	private List<GameObject> menuList;
 	private GameObject _selector;
 
 	void Start ()
@@ -65,6 +65,7 @@ public class TitleController : MonoBehaviour
 	private void pressCredit ()
 	{
 		Debug.Log ("call pressCredit()");
+		SceneManager.LoadScene ("Credit");
 	}
 
 	private void changeSelectMenu (int d)
