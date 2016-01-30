@@ -7,7 +7,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class PlayerScript : MonoBehaviour {
+
+    public int HP;
+    //public int SCORE;
 
 	// Use this for initialization
 	void Start () {
@@ -18,4 +21,15 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public int getHP()
+    {
+        return HP;
+    }
+
+    /*public int getScore()
+    {
+        return SCORE;
+    }*/
+
 }
