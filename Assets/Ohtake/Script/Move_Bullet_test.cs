@@ -1,31 +1,46 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Move_Bullet_test : MonoBehaviour {
+public class Move_Bullet_test : MonoBehaviour
+{
     public float flap = 5f;//ジャンプする強さ
-    //public Rigidbody2D rb;
 
     public int speed = 10;//弾のスピード
 
-    //private float startTime;
+    public GameObject bullet;
 
-	// Use this for initialization
-	void Start () {
-        //rb = gameObject.GetComponent<Rigidbody2D>();
-        //startTime = Time.time;
+    IEnumerator DestroyBullet()
+    {
+        while (true)
+        {
+            // 弾をプレイヤーと同じ位置/角度で作成
+            // 1秒後消す
+            yield return new WaitForSeconds(1.0f);
+            Destroy(bullet);
 
+        }
+    }
+
+
+
+    // Use this for initialization
+    void Start()
+    {
         //弾発射
         GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
 
-        //if (startTime - Time.time % 5 == 0)
-        //{
-            // (0,1)方向に瞬間的に力を加えて跳ねさせる
-            //rb.AddForce(Vector2.left * flap);
-        //}
+    // Update is called once per frame
+    void Update()
+    {
 
-	}
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Stage")
+        {
+            StartCoroutine("DestroyBullet");
+        }
+    }
 }
