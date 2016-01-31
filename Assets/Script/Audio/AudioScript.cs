@@ -51,4 +51,12 @@ public class AudioScript : MonoBehaviour {
             sources[3].Play();
         }
     }
+
+    public void PlaySelected()
+    {
+        if (!sources[4].isPlaying)
+        {
+            sources[4].Play();
+        }
+    }
 }
