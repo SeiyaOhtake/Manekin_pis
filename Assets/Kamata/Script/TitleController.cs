@@ -9,6 +9,8 @@ public class TitleController : MonoBehaviour
 {
 	[SerializeField]
 	GameObject selectMenu;
+	[SerializeField]
+	GameObject selectStage;
 
 	private List<GameObject> menuList;
 	private GameObject _selector;
@@ -34,7 +36,7 @@ public class TitleController : MonoBehaviour
 			changeSelectMenu (1);
 		} else if (Input.GetKeyDown (KeyCode.UpArrow)) {
 			changeSelectMenu (menuList.Count - 1);
-		} else if (Input.GetKeyDown (KeyCode.Return)) {
+		} else if (Input.GetKeyDown (KeyCode.Return) && selectMenu.activeSelf == true) {
 			select ();
 		}
 	}
@@ -60,7 +62,14 @@ public class TitleController : MonoBehaviour
 	private void pressStart ()
 	{
 		Debug.Log ("call pressStart()");
-		SceneManager.LoadScene ("Main");
+		//SceneManager.LoadScene ("Main");
+		switchUI ();
+	}
+
+	private void switchUI ()
+	{
+		selectMenu.SetActive (!selectMenu.activeSelf);
+		selectStage.SetActive (!selectStage.activeSelf);
 	}
 
 	private void pressCredit ()

@@ -101,9 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 3947209}
 --- !u!58 &3947211
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -460,9 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 189359521}
 --- !u!58 &189359523
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -823,9 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 475968089}
 --- !u!58 &475968091
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -949,9 +943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 557108598}
 --- !u!58 &557108600
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -982,9 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 609691068}
 --- !u!58 &609691070
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1015,9 +1005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 634340500}
 --- !u!58 &634340502
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1098,9 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 732441111}
 --- !u!58 &732441113
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2113,9 +2099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 1412012442}
 --- !u!58 &1412012444
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2146,9 +2130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 1414318247}
 --- !u!58 &1414318249
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2251,9 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 1472614376}
 --- !u!1 &1590762035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,9 +2357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 1633184166}
 --- !u!58 &1633184168
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2648,9 +2626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  scorePoint: 100
-  enemyHitPoint: 5
-  smokeEffect: {fileID: 0}
+  EnemyObject: {fileID: 1931143725}
 --- !u!58 &1931143727
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3154,10 +3130,6 @@ Prefab:
     - target: {fileID: 483446, guid: b7d3e1d82d82d406cad9fe24e5c0c3f6, type: 2}
       propertyPath: m_LocalScale.x
       value: 15.256764
-      objectReference: {fileID: 0}
-    - target: {fileID: 11449330, guid: b7d3e1d82d82d406cad9fe24e5c0c3f6, type: 2}
-      propertyPath: enemyHitPoint
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7d3e1d82d82d406cad9fe24e5c0c3f6, type: 2}
