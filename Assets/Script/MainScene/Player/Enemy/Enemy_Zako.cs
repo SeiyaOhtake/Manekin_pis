@@ -1,16 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy_Zako : MonoBehaviour {
+public class Enemy_Zako : MonoBehaviour
+{
     public Enemy E;
-    public GameObject EnemyObject;
+    //public GameObject EnemyObject;
+	[SerializeField]
+	int scorePoint = 100;
+	[SerializeField]
+	int enemyHitPoint = 5;
+	[SerializeField]
+	GameObject smokeEffect;
+
+	private GameObject instanceSmokeEffect;
     Manekin_Pis MP;
 
 	// Use this for initialization
 	void Start () {
         E = new Enemy();
-        E.SCORE = 100;//倒した時のスコア
-        E.HP = 10;//体力
+		E.SCORE = scorePoint;//倒した時のスコア
+		E.HP = enemyHitPoint;//体力
         MP = GameObject.FindWithTag("Player").GetComponent<Manekin_Pis>();
 	}
 	
@@ -19,7 +28,8 @@ public class Enemy_Zako : MonoBehaviour {
         //体力が0になったら消える
         if (E.HP <= 0)
         {
-            Destroy(EnemyObject);
+			Instantiate (smokeEffect, transform.position, Quaternion.identity);
+			Destroy(gameObject);
             MP.PulsScore(E.SCORE);
         }
         //print(MP.getScore());
