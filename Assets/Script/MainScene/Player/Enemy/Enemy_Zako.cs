@@ -8,7 +8,7 @@ public class Enemy_Zako : MonoBehaviour
 	[SerializeField]
 	int scorePoint = 100;
 	[SerializeField]
-	int enemyHitPoint = 8;
+	int enemyHitPoint = 5;
 	[SerializeField]
 	GameObject smokeEffect;
 

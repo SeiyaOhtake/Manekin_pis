@@ -193,7 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 110571170}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &110571172
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -282,7 +284,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 148767264}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &148767266
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -313,7 +317,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 189359521}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &189359523
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -746,7 +752,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 665605915}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &665605918
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -893,7 +901,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 706635249}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &706635252
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -924,7 +934,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 734525701}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &734525703
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1005,7 +1017,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 837803937}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &837803939
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1133,7 +1147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 934263107}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &934263109
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1186,6 +1202,52 @@ Prefab:
     - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1065557495
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 69.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_RootOrder
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 157976, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_Name
+      value: Block (22)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
@@ -1298,7 +1360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 1193103985}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &1193103988
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1333,7 +1397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 1237201018}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &1237201021
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1526,6 +1592,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1288283732
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 65.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 10.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 428598, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 157976, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+      propertyPath: m_Name
+      value: Block (23)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2c2f61882006d70468c0a403e4abafb7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1310177094
 Prefab:
   m_ObjectHideFlags: 0
@@ -1699,7 +1811,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 1368410661}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &1368410663
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1734,7 +1848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 1396941277}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &1396941280
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2204,7 +2320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 1679654374}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &1679654377
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2293,7 +2411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 1757468571}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &1757468574
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2424,7 +2544,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 1875897126}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &1875897129
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2790,7 +2912,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 2036445001}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &2036445004
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2821,7 +2945,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E: {fileID: 0}
-  EnemyObject: {fileID: 2039444559}
+  scorePoint: 100
+  enemyHitPoint: 5
+  smokeEffect: {fileID: 0}
 --- !u!58 &2039444561
 CircleCollider2D:
   m_ObjectHideFlags: 0
