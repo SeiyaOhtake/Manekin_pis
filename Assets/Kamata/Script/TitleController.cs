@@ -11,8 +11,9 @@ public class TitleController : MonoBehaviour
 	GameObject selectMenu;
 	[SerializeField]
 	GameObject selectStage;
+    AudioScript AS;
 
-	private List<GameObject> menuList;
+    private List<GameObject> menuList;
 	private GameObject _selector;
 
 	void Start ()
@@ -29,7 +30,8 @@ public class TitleController : MonoBehaviour
 		}
 		menuList.First().GetComponent<TitleSelectMenu>()
 			.SelectorImage.SetActive(true);
-	}
+        AS = GameObject.FindWithTag("Audio").GetComponent<AudioScript>();
+    }
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
@@ -57,6 +59,7 @@ public class TitleController : MonoBehaviour
 		default:
 			break;
 		}
+        AS.PlaySelected();
 	}
 
 	private void pressStart ()
@@ -85,6 +88,7 @@ public class TitleController : MonoBehaviour
 		GameObject nextSelectGameObject = menuList[Mathf.Abs((current + d) % menuList.Count)].GetComponent<TitleSelectMenu>().SelectorImage;
 		nextSelectGameObject.SetActive (true);
 		currentSelectGameObject.SetActive (false);
+        AS.PlaySelect();
 	}
 
 	public GameObject GetCurrentSelectGameObject ()
