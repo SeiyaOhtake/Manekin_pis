@@ -30,7 +30,7 @@ public class MP_FiringPoint : MonoBehaviour {
     void Start()
     {
         //StartCoroutine("NomalBullet");
-        InvokeRepeating("FireBullet", 0f, .1f);
+        InvokeRepeating("FireBullet", 0f, bulletRepeatingRate);
     }
 
     void FireBullet()

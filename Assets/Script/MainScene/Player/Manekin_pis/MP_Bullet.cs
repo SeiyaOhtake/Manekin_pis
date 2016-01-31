@@ -5,7 +5,7 @@ public class MP_Bullet : MonoBehaviour {
    
     public int speed = 20;//弾のスピード
 
-    public float WaitTime=1.0f;
+    public float WaitTime=2.0f;
 
     public GameObject bullet;
     public GameObject FringPoint;
@@ -45,20 +45,20 @@ public class MP_Bullet : MonoBehaviour {
         {
             case 0://通常
                 speed = 20;
-                WaitTime = 1.0f;
+                WaitTime = 2.0f;
                 //MP_FP.changeBullet(0);
                 break;
             case 1://ビール取ったとき
-                speed = 30;
-                WaitTime = 0.5f;
+                speed = 40;
+                WaitTime = 2.0f;
                 //ここで弾の色を変えたい
                 //GetComponent<SpriteRenderer>().material.color = Color.yellow;
                 //Debug.Log("change color");
                 //MP_FP.changeBullet(1);
                 break;
             case 2://RedBullをとったとき
-                speed = 30;
-                WaitTime = 0.1f;
+                //speed = 30;
+                //WaitTime = 0.1f;
                 //MP_FP.changeBullet(2);
                 break;
         }
