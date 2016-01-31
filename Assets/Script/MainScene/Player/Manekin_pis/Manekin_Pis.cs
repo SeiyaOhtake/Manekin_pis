@@ -30,6 +30,10 @@ public class Manekin_Pis : MonoBehaviour
 
     void Start()
     {
+        HP = 5;
+        SCORE = 0;
+        Special_Gauge = 0;
+
         //おまじない一覧
         rb2d = GetComponent<Rigidbody2D>();//重力
         mannekenPisAnimator = GetComponent<Animator>();//小僧のアニメーター
