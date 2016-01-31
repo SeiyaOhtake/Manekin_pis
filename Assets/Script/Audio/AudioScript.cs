@@ -14,7 +14,7 @@ public class AudioScript : MonoBehaviour {
         //ジャンプ音
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PlaySE(0);
+            //PlaySE(0);
         }
 	}
 

@@ -5,6 +5,7 @@ public class RedBull : MonoBehaviour {
     HealthBarController HBC;//体力表示に必要
 
     Manekin_Pis MP;
+    AudioScript AS;
 
 
     // Use this for initialization
@@ -12,6 +13,7 @@ public class RedBull : MonoBehaviour {
     {
         MP = GameObject.FindWithTag("Player").GetComponent<Manekin_Pis>();
         HBC = GameObject.FindWithTag("HealthBar").GetComponent<HealthBarController>();//体力バー関係
+        AS = GameObject.FindWithTag("Audio").GetComponent<AudioScript>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class RedBull : MonoBehaviour {
             MP.HP++;
             HBC.UpdateHealthBar();
             Destroy(this.gameObject);
+            AS.PlayGetItem();
         }
     }
 }
