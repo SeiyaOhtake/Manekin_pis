@@ -8,7 +8,7 @@ public class Enemy_Zako : MonoBehaviour
 	[SerializeField]
 	int scorePoint = 100;
 	[SerializeField]
-	int enemyHitPoint = 5;
+	int enemyHitPoint = 8;
 	[SerializeField]
 	GameObject smokeEffect;
 
@@ -21,6 +21,9 @@ public class Enemy_Zako : MonoBehaviour
 		E.SCORE = scorePoint;//倒した時のスコア
 		E.HP = enemyHitPoint;//体力
         MP = GameObject.FindWithTag("Player").GetComponent<Manekin_Pis>();
+
+		if (smokeEffect == null)
+			smokeEffect = Resources.Load ("smoke") as GameObject;
 	}
 	
 	// Update is called once per frame
@@ -28,7 +31,7 @@ public class Enemy_Zako : MonoBehaviour
         //体力が0になったら消える
         if (E.HP <= 0)
         {
-			Instantiate (smokeEffect, transform.position, Quaternion.identity);
+            Instantiate(smokeEffect, transform.position, Quaternion.identity);
 			Destroy(gameObject);
             MP.PulsScore(E.SCORE);
         }

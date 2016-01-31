@@ -19,7 +19,7 @@ public class ResultManager : MonoBehaviour {
 	void Update () {
         if (Input.GetKey(KeyCode.Space))
         {
-            print("ok");
+            //print("ok");
             SceneManager.LoadScene("Title");
         }
 	}

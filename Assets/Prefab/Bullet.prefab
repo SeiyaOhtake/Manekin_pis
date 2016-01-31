@@ -73,8 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ab5f7cac399304e89afe0dd11f5882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  WaitTime: 0.5
+  speed: 40
+  WaitTime: 2
   bullet: {fileID: 128612}
   FringPoint: {fileID: 162790, guid: 443e5d7f00a7a411db2d602b4962f45a, type: 2}
 --- !u!212 &21228530
@@ -202,6 +202,10 @@ Prefab:
       propertyPath: FringPoint
       value: 
       objectReference: {fileID: 162790, guid: 443e5d7f00a7a411db2d602b4962f45a, type: 2}
+    - target: {fileID: 0}
+      propertyPath: WaitTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128612}

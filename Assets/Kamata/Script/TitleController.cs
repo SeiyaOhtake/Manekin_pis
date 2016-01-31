@@ -9,8 +9,11 @@ public class TitleController : MonoBehaviour
 {
 	[SerializeField]
 	GameObject selectMenu;
+	[SerializeField]
+	GameObject selectStage;
+    AudioScript AS;
 
-	private List<GameObject> menuList;
+    private List<GameObject> menuList;
 	private GameObject _selector;
 
 	void Start ()
@@ -27,14 +30,15 @@ public class TitleController : MonoBehaviour
 		}
 		menuList.First().GetComponent<TitleSelectMenu>()
 			.SelectorImage.SetActive(true);
-	}
+        AS = GameObject.FindWithTag("Audio").GetComponent<AudioScript>();
+    }
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			changeSelectMenu (1);
 		} else if (Input.GetKeyDown (KeyCode.UpArrow)) {
 			changeSelectMenu (menuList.Count - 1);
-		} else if (Input.GetKeyDown (KeyCode.Return)) {
+		} else if (Input.GetKeyDown (KeyCode.Return) && selectMenu.activeSelf == true) {
 			select ();
 		}
 	}
@@ -55,12 +59,20 @@ public class TitleController : MonoBehaviour
 		default:
 			break;
 		}
+        AS.PlaySelected();
 	}
 
 	private void pressStart ()
 	{
 		Debug.Log ("call pressStart()");
-		SceneManager.LoadScene ("Main");
+		//SceneManager.LoadScene ("Main");
+		switchUI ();
+	}
+
+	private void switchUI ()
+	{
+		selectMenu.SetActive (!selectMenu.activeSelf);
+		selectStage.SetActive (!selectStage.activeSelf);
 	}
 
 	private void pressCredit ()
@@ -76,6 +88,7 @@ public class TitleController : MonoBehaviour
 		GameObject nextSelectGameObject = menuList[Mathf.Abs((current + d) % menuList.Count)].GetComponent<TitleSelectMenu>().SelectorImage;
 		nextSelectGameObject.SetActive (true);
 		currentSelectGameObject.SetActive (false);
+        AS.PlaySelect();
 	}
 
 	public GameObject GetCurrentSelectGameObject ()
