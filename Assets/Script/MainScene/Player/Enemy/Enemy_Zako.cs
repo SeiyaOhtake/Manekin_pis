@@ -28,7 +28,7 @@ public class Enemy_Zako : MonoBehaviour
         //体力が0になったら消える
         if (E.HP <= 0)
         {
-			Instantiate (smokeEffect, transform.position, Quaternion.identity);
+            Instantiate(smokeEffect, transform.position, Quaternion.identity);
 			Destroy(gameObject);
             MP.PulsScore(E.SCORE);
         }

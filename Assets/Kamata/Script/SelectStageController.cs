@@ -12,8 +12,9 @@ public class SelectStageController : MonoBehaviour
 	[Space(20)][Header("ステージ設定")][Tooltip("ステージのシーン名を入力")]
 	[SerializeField]
 	List<string> Stages;
+    AudioScript AS;
 
-	private int currentStagePos;
+    private int currentStagePos;
 	private int stageLength;
 
 	void Awake ()
@@ -27,7 +28,9 @@ public class SelectStageController : MonoBehaviour
 		currentStagePos = 0;
 		stageLength = Stages.Count;
 		stageText.text = Stages.First ();
-	}
+
+        AS = GameObject.FindWithTag("Audio").GetComponent<AudioScript>();
+    }
 
 	void Update ()
 	{
@@ -40,6 +43,7 @@ public class SelectStageController : MonoBehaviour
 
 		if (Input.GetKeyDown (KeyCode.Return)) {
 			SceneManager.LoadScene (stageText.text);
+            AS.PlaySelected();
 		}
 	}
 
@@ -47,5 +51,6 @@ public class SelectStageController : MonoBehaviour
 	{
 		currentStagePos = Mathf.Abs((stageLength + currentStagePos + d) % stageLength);
 		stageText.text = Stages [currentStagePos];
+        AS.PlaySelect();
 	}
 }
