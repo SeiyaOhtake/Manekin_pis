@@ -124,6 +124,8 @@ MonoBehaviour:
   flap: 9
   JumpSwitch: 0
   rb2d: {fileID: 0}
+  HP: 5
+  Special_Gauge: 0
 --- !u!114 &11448490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4f53c8ea4c38947b9ee362fee4565e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRunning: 1
+  changeBulletID: 1
+  bulletRepeatingRate: 0.1
   bullet: {fileID: 128612, guid: eaad6c465245870459ec26c29f9528ed, type: 2}
+  bullet2: {fileID: 118486, guid: a6b14579361829742b9f7f505f345b51, type: 2}
+  currentBullet: {fileID: 118486, guid: a6b14579361829742b9f7f505f345b51, type: 2}
 --- !u!212 &21245224
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -200,6 +207,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: flap
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bullet2
+      value: 
+      objectReference: {fileID: 118486, guid: a6b14579361829742b9f7f505f345b51, type: 2}
+    - target: {fileID: 0}
+      propertyPath: changeBulletID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
