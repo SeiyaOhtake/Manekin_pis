@@ -11,7 +11,7 @@ public class AudioScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //ジャンプ音
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             PlaySE(0);
         }

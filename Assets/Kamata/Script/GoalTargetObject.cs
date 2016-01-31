@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class GoalTargetObject : MonoBehaviour
@@ -33,6 +34,8 @@ public class GoalTargetObject : MonoBehaviour
 	void GetGoal ()
 	{
 		// TODO:ここにゴール時の処理
-		Debug.Log ("Goal");
+		//Debug.Log ("Goal");
+        SceneManager.LoadScene("Result");
+
 	}
 }
