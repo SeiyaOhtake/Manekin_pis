@@ -27,7 +27,7 @@ public class RedBull : MonoBehaviour {
         {
             MP.HP++;
             HBC.UpdateHealthBar();
-            Destroy(GameObject.Find("Redbull"));
+            Destroy(this.gameObject);
         }
     }
 }

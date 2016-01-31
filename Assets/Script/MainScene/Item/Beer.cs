@@ -30,7 +30,8 @@ public class Beer : MonoBehaviour {
             MP_FP = GameObject.FindObjectOfType<MP_FiringPoint>();
             MP_B.ChangeBullet(ItemID);
             MP_FP.changeBullet(1);
-            Destroy(GameObject.Find("beer"));
+            //Destroy(GameObject.Find("beer"));
+            Destroy(this.gameObject);
         }
     }
 }
