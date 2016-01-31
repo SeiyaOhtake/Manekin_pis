@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   E: {fileID: 0}
   scorePoint: 100
-  enemyHitPoint: 5
+  enemyHitPoint: 10
   smokeEffect: {fileID: 184334, guid: 76027196aba95460aaa6e709e7b9a25c, type: 2}
 --- !u!212 &21223094
 SpriteRenderer:
@@ -121,6 +121,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemyHitPoint
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
