@@ -20,6 +20,8 @@ public class Manekin_Pis : MonoBehaviour
     public static int SCORE = 0;//スコア
     public int Special_Gauge = 0;//必殺ゲージ（未実装）
 
+    AudioScript AS;
+
     IEnumerator mutekiTimer()
     {
         // 弾をプレイヤーと同じ位置/角度で作成
@@ -38,6 +40,7 @@ public class Manekin_Pis : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();//重力
         mannekenPisAnimator = GetComponent<Animator>();//小僧のアニメーター
         HBC = GameObject.FindWithTag("HealthBar").GetComponent<HealthBarController>();//体力バー関係
+        AS = GameObject.FindWithTag("Audio").GetComponent<AudioScript>();
     }
 
     // Update is called once per frame
@@ -56,6 +59,7 @@ public class Manekin_Pis : MonoBehaviour
                 rb2d.AddForce(Vector2.up * flap, ForceMode2D.Impulse);
                 //飛んでいる状態
                 JumpSwitch = true;
+                AS.PlaySE(0);
             }
         }
 
@@ -96,6 +100,7 @@ public class Manekin_Pis : MonoBehaviour
                 HP--;//ダメージが入る。
                 mutekiSwich = true;
                 StartCoroutine("mutekiTimer");
+                AS.PlayDamageSound();
             }
             HBC.UpdateHealthBar();//体力バー更新
         }

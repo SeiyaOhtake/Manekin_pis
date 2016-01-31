@@ -9,10 +9,12 @@ public class Beer : MonoBehaviour {
     [SerializeField]
     GameObject Bullet_Prefab;
     public GameObject FringPoint;
+    AudioScript AS;
 
     // Use this for initialization
     void Start()
     {
+        AS = GameObject.FindWithTag("Audio").GetComponent<AudioScript>();
         MP_B = Bullet_Prefab.GetComponent<MP_Bullet>();
     }
 
@@ -32,6 +34,7 @@ public class Beer : MonoBehaviour {
             MP_FP.changeBullet(1);
             //Destroy(GameObject.Find("beer"));
             Destroy(this.gameObject);
+            AS.PlayGetItem();
         }
     }
 }
