@@ -11,14 +11,14 @@ public class GoalTargetObject : MonoBehaviour
 	float waitTime = 2f;
 
 	private CircleCollider2D circleCollider2D;
-	private Animator anim;
+//	private Animator anim;
 
 	void Awake ()
 	{
 		circleCollider2D = GetComponent<CircleCollider2D> ();
 		circleCollider2D.isTrigger = true;
 		circleCollider2D.radius = circleRadius;
-		anim = GetComponent<Animator> ();
+//		anim = GetComponent<Animator> ();
 	}
 
 	void OnTriggerEnter2D (Collider2D col)
@@ -26,7 +26,7 @@ public class GoalTargetObject : MonoBehaviour
 		if (col.tag == "Player") {
 			// Stop walking
 			col.GetComponent <Manekin_Pis>().WalkSpeed = 0f;
-			anim.SetTrigger ("Goal");
+//			anim.SetTrigger ("Goal");
 			Invoke ("GetGoal", waitTime);
 		}
 	}
