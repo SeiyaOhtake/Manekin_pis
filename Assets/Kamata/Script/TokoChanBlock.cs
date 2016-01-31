@@ -16,6 +16,7 @@ public class TokoChanBlock : MonoBehaviour
 			anim.SetTrigger ("Goal");
 		} else if (col.CompareTag("PlayerBullet")) {
 			anim.SetBool ("Guard", true);
+			Destroy (col.gameObject);
 		}
 	}
 }
