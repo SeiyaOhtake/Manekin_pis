@@ -2,32 +2,43 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Manekin_Pis : MonoBehaviour {
+public class Manekin_Pis : MonoBehaviour
+{
 
     public float WalkSpeed = 0.1f;//進んでいくスピード
     public float flap = 9.0f;//ジャンプの強さ
     public bool JumpSwitch = false;//ジャンプしているか否か
+    public bool mutekiSwich = false;//無敵状態か否か
 
     public Rigidbody2D rb2d;//Rigidbody ジャンプに必要
 
-	private Animator mannekenPisAnimator;//アニメーター
+    private Animator mannekenPisAnimator;//アニメーター
 
     HealthBarController HBC;//体力表示に必要
 
-    public int HP=5;//体力
-    public static int SCORE=0;//スコア
-    public int Special_Gauge=0;//必殺ゲージ（未実装）
+    public int HP = 5;//体力
+    public static int SCORE = 0;//スコア
+    public int Special_Gauge = 0;//必殺ゲージ（未実装）
+
+    IEnumerator mutekiTimer()
+    {
+        // 弾をプレイヤーと同じ位置/角度で作成
+        // 1秒後消す
+        yield return new WaitForSeconds(3.0f);
+        mutekiSwich = false;
+    }
 
     void Start()
     {
         //おまじない一覧
         rb2d = GetComponent<Rigidbody2D>();//重力
-		mannekenPisAnimator = GetComponent<Animator> ();//小僧のアニメーター
+        mannekenPisAnimator = GetComponent<Animator>();//小僧のアニメーター
         HBC = GameObject.FindWithTag("HealthBar").GetComponent<HealthBarController>();//体力バー関係
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
         transform.Translate(Vector2.right * WalkSpeed);//右に移動し続ける
 
         // スペースキーが押されたら
@@ -44,8 +55,8 @@ public class Manekin_Pis : MonoBehaviour {
             }
         }
 
-		mannekenPisAnimator.SetFloat("Speed", WalkSpeed);
-		mannekenPisAnimator.SetBool ("Jump", JumpSwitch);
+        mannekenPisAnimator.SetFloat("Speed", WalkSpeed);
+        mannekenPisAnimator.SetBool("Jump", JumpSwitch);
 
         if (HP <= 0)//体力が0になったら
         {
@@ -54,7 +65,7 @@ public class Manekin_Pis : MonoBehaviour {
             //Application.loadedLevel("Result");
             //Application.LoadLevel("Result");
             SceneManager.LoadScene("Result");//Resultへ
-            
+
         }
         //奈落に落ちたらResultへ
         if (this.gameObject.transform.position.y < -30)
@@ -62,7 +73,7 @@ public class Manekin_Pis : MonoBehaviour {
             SceneManager.LoadScene("Result");
         }
 
-	}
+    }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -76,8 +87,12 @@ public class Manekin_Pis : MonoBehaviour {
         //敵と当たったら
         if (coll.gameObject.tag == "Enemy")
         {
-            HP--;//ダメージが入る。無敵時間モードを実装しなくてもよさげ
-            //Destroy(coll.gameObject);
+            if (!mutekiSwich)
+            {
+                HP--;//ダメージが入る。
+                mutekiSwich = true;
+                StartCoroutine("mutekiTimer");
+            }
             HBC.UpdateHealthBar();//体力バー更新
         }
     }
@@ -101,5 +116,6 @@ public class Manekin_Pis : MonoBehaviour {
     {
         return SCORE;
     }
+
 
 }
