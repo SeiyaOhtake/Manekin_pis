@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ResultManager : MonoBehaviour {
 
@@ -16,6 +17,10 @@ public class ResultManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if (Input.GetKey(KeyCode.Space))
+        {
+            print("ok");
+            SceneManager.LoadScene("Title");
+        }
 	}
 }

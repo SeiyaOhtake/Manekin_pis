@@ -47,15 +47,21 @@ public class Manekin_Pis : MonoBehaviour {
 		mannekenPisAnimator.SetFloat("Speed", WalkSpeed);
 		mannekenPisAnimator.SetBool ("Jump", JumpSwitch);
 
-        if (HP <= 0)
+        if (HP <= 0)//体力が0になったら
         {
             //loadlevelを設定すること
             //Debug.Log("you died");//デバッグ
             //Application.loadedLevel("Result");
             //Application.LoadLevel("Result");
-            SceneManager.LoadScene("Result");
+            SceneManager.LoadScene("Result");//Resultへ
             
         }
+        //奈落に落ちたらResultへ
+        if (this.gameObject.transform.position.y < -30)
+        {
+            SceneManager.LoadScene("Result");
+        }
+
 	}
 
     void OnCollisionEnter2D(Collision2D coll)
