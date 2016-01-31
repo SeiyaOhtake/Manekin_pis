@@ -77,6 +77,7 @@ public class Manekin_Pis : MonoBehaviour {
         if (coll.gameObject.tag == "Enemy")
         {
             HP--;//ダメージが入る。無敵時間モードを実装しなくてもよさげ
+            //Destroy(coll.gameObject);
             HBC.UpdateHealthBar();//体力バー更新
         }
     }
