@@ -1141,6 +1141,7 @@ MonoBehaviour:
   - Main
   - Main2
   - Main3
+  - Main4
 --- !u!1001 &1748211281
 Prefab:
   m_ObjectHideFlags: 0
