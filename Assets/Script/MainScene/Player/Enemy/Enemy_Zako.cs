@@ -21,6 +21,9 @@ public class Enemy_Zako : MonoBehaviour
 		E.SCORE = scorePoint;//倒した時のスコア
 		E.HP = enemyHitPoint;//体力
         MP = GameObject.FindWithTag("Player").GetComponent<Manekin_Pis>();
+
+		if (smokeEffect == null)
+			smokeEffect = Resources.Load ("smoke") as GameObject;
 	}
 	
 	// Update is called once per frame
