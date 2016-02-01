@@ -6,10 +6,13 @@
 
 ## Global Game Jam 2016
 
+### OUR GAME
+
+http://globalgamejam.org/2016/games/manneken-peace
 
 ### Location
 
-Redbull Studios Tokyo Hall, Japan
+[Redbull Studios Tokyo Hall, Japan](http://globalgamejam.org/2016/jam-sites/global-game-jam-red-bull-studios-tokyo-hall)
 
 
 
