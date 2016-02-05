@@ -64,7 +64,6 @@ public class TitleController : MonoBehaviour
 
 	private void pressStart ()
 	{
-		Debug.Log ("call pressStart()");
 		//SceneManager.LoadScene ("Main");
 		switchUI ();
 	}
@@ -77,7 +76,6 @@ public class TitleController : MonoBehaviour
 
 	private void pressCredit ()
 	{
-		Debug.Log ("call pressCredit()");
 		SceneManager.LoadScene ("Credit");
 	}
 

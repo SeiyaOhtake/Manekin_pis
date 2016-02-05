@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - HealthBar
   - Audio
+  - InputSlider
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,10 @@ public class MP_Bullet : MonoBehaviour {
 
     public GameObject bullet;
     public GameObject FringPoint;
-    MP_FiringPoint MP_FP;
+
+//	[Range(0f, 1f)]
+//	public float fireRange = 0f;
+//    MP_FiringPoint MP_FP;
 
     IEnumerator DestroyBullet()
     {
@@ -25,8 +28,9 @@ public class MP_Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //弾発射
-        GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
-        MP_FP = FringPoint.GetComponent<MP_FiringPoint>();
+//		GetComponent<Rigidbody2D>().velocity = (transform.right.normalized + transform.up * fireRange) * speed;
+//		GetComponent<Rigidbody2D>().velocity = new Vector3();
+//        MP_FP = FringPoint.GetComponent<MP_FiringPoint>();
 	}
 	
 	// Update is called once per frame

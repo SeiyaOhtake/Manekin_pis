@@ -4,7 +4,8 @@ using System.Collections;
 public class GameCamera : MonoBehaviour {
 	
 	private Transform target;
-	private float trackSpeed = 10;
+	[SerializeField]
+	float trackSpeed = 10;
 	
 	
 	// Set target
