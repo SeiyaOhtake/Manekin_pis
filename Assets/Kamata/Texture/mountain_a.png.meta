@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: df2a0461568554c299aebf2734e5d636
-timeCreated: 1454172958
+guid: 126b47f20e3254867be9bd3a94b8f66b
+timeCreated: 1454253622
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -41,7 +41,7 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 5
+  alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
@@ -51,7 +51,7 @@ TextureImporter:
   spriteSheet:
     sprites: []
     outline: []
-  spritePackingTag: UI
+  spritePackingTag: Game
   userData: 
   assetBundleName: 
   assetBundleVariant: 

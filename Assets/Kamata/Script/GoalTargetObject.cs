@@ -27,15 +27,20 @@ public class GoalTargetObject : MonoBehaviour
 			// Stop walking
 			col.GetComponent <Manekin_Pis>().WalkSpeed = 0f;
 //			anim.SetTrigger ("Goal");
+
+			// Stop Pis
+			col.BroadcastMessage("UnableShot");
+
+			// reset Camera offset
+			Camera.main.GetComponent<FollowCamera>().offset = Vector3.zero;
+
+			// Go to result scene after waitTime sec.
 			Invoke ("GetGoal", waitTime);
 		}
 	}
 
 	void GetGoal ()
 	{
-		// TODO:ここにゴール時の処理
-		//Debug.Log ("Goal");
         SceneManager.LoadScene("Result");
-
 	}
 }

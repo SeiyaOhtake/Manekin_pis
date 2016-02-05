@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MP_FiringPoint : MonoBehaviour {
 
@@ -19,23 +20,34 @@ public class MP_FiringPoint : MonoBehaviour {
     GameObject bullet2;
 
     public GameObject currentBullet;
+	public bool canShot { get; set; }
+
+	private Slider inputSlider;
 
     void Awake()
     {
         changeBulletID = 0;
         isRunning = false;
         currentBullet = bullet;
+		canShot = true;
     }
 
     void Start()
     {
         //StartCoroutine("NomalBullet");
         InvokeRepeating("FireBullet", 0f, bulletRepeatingRate);
+		GameObject _is = GameObject.FindWithTag ("InputSlider");
+		if (_is != null) inputSlider = _is.GetComponent<Slider>();
     }
 
     void FireBullet()
     {
-        Instantiate(currentBullet, transform.position, transform.rotation);
+		if (canShot) {
+			GameObject go = Instantiate (currentBullet, transform.position, transform.rotation) as GameObject;
+			float fireRange = 0f;
+			if (inputSlider != null) fireRange = inputSlider.value;
+			go.GetComponent<Rigidbody2D> ().velocity = (transform.right.normalized + (transform.up * fireRange)) * go.GetComponent<MP_Bullet> ().speed;
+		}
     }
 
     // Startメソッドをコルーチンとして呼び出す
@@ -86,4 +98,9 @@ public class MP_FiringPoint : MonoBehaviour {
                 break;
         }
     }
+
+	public void UnableShot ()
+	{
+		canShot = false;
+	}
 }
