@@ -23,20 +23,17 @@ public class Enemy_Zako : MonoBehaviour
         MP = GameObject.FindWithTag("Player").GetComponent<Manekin_Pis>();
 
 		if (smokeEffect == null)
-			smokeEffect = Resources.Load ("smoke") as GameObject;
+			smokeEffect = Resources.Load<GameObject> ("smoke");
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        //体力が0になったら消える
-        if (E.HP <= 0)
-        {
-            Instantiate(smokeEffect, transform.position, Quaternion.identity);
-			Destroy(gameObject);
-            MP.PulsScore(E.SCORE);
-        }
-        //print(MP.getScore());
-	}
+//	void Update () {
+//        //体力が0になったら消える
+//        if (E.HP <= 0)
+//        {
+//        }
+//        //print(MP.getScore());
+//	}
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -44,6 +41,12 @@ public class Enemy_Zako : MonoBehaviour
         if (coll.gameObject.tag == "PlayerBullet")
         {
             E.HP--;
+			if (E.HP <= 0) {
+				if (smokeEffect != null)
+					Instantiate (smokeEffect, transform.position, Quaternion.identity);
+				Destroy(gameObject);
+				MP.PulsScore(E.SCORE);
+			}
         }
     }
 }
